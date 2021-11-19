@@ -81,24 +81,24 @@
             
             <div class="row">
               
-                  
+
               
 			  
              
               <div class="form-group col-sm-12">
-                <button type="button" class="btn btn-primary btn-block" onclick="$('#weixin').show()"><a>微信打赏</a></button>
+                <button type="button" class="btn btn-primary btn-block" id="btn1"><a>微信打赏</a></button>
 				<br>
-				<img class="btn btn-primary btn-block" style="display:none" id="weixin" width="400" src="static/wxpay.png">
+				<img class="btn btn-primary btn-block" style="display:none" id="box1" width="400" src="static/wxpay.png">
               </div>
 			  <div class="form-group col-sm-12">
-                <button type="button" class="btn btn-primary btn-block" onclick="$('#qqpay').show()"><a>QQ打赏</a></button>
+                <button type="button" class="btn btn-primary btn-block" id="btn2"><a>QQ打赏</a></button>
 				<br>
-				<img class="btn btn-primary btn-block" style="display:none" id="qqpay" width="400" src="static/qqpay.png">
+				<img class="btn btn-primary btn-block" style="display:none" id="box2" width="400" src="static/qqpay.png">
               </div>
 			  <div class="form-group col-sm-12">
-                <button type="button" class="btn btn-primary btn-block" onclick="$('#alipay').show()"><a>支付宝打赏</a></button>
+                <button type="button" class="btn btn-primary btn-block" id="btn3"><a>支付宝打赏</a></button>
 				<br>
-				<img class="btn btn-primary btn-block" style="display:none" id="alipay" width="400" src="static/alipay.png">
+				<img class="btn btn-primary btn-block" style="display:none" id="box3" width="400" src="static/alipay.png">
               </div>
 			  
 			  
@@ -127,8 +127,45 @@
   </main>
 
   
-<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://cdn.bootcss.com/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+var box1 = document.getElementById("box1");
+var btn1 = document.getElementById("btn1");
+             
+btn1.onclick = function(event){
+    event.stopPropagation();
+    if(box1.style.display == "none"){
+        box1.style.display = "block";
+    }else{
+        box1.style.display = "none";
+    }
+};
+var box2 = document.getElementById("box2");
+var btn2 = document.getElementById("btn2");
+             
+btn2.onclick = function(event){
+    event.stopPropagation();
+    if(box2.style.display == "none"){
+        box2.style.display = "block";
+    }else{
+        box2.style.display = "none";
+    }
+};
+
+var box3 = document.getElementById("box3");
+var btn3 = document.getElementById("btn3");
+             
+btn3.onclick = function(event){
+    event.stopPropagation();
+    if(box3.style.display == "none"){
+        box3.style.display = "block";
+    }else{
+        box3.style.display = "none";
+    }
+};
+
+</script>  
+  
 <script type="text/javascript" src="app.js"></script>
+
 </body>
 </html>
