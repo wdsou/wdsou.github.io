@@ -28,16 +28,16 @@
 <body>
 
   <audio autoplay="autopaly" loop="loop" preload="auto" id="audios">
-    <source src="static/wuyueyu.mp3" type="audio/mp3" />
+    <source src="https://mybgm1.github.io/github.io/you.mp3" type="audio/mp3" />
   </audio>
 
 <script>
 
- // 将以下代码添加到js入口函数内即可
+ 
 document.addEventListener('touchstart', function() {
     document.getElementById('audios').play()
 })
- // 将以下代码添加到js入口函数内即可
+ 
 // 这里使用了微信自带的WeixinJSBridgeReady事件
 document.addEventListener('WeixinJSBridgeReady', function() {
     document.getElementById('audios').play()
