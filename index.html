@@ -26,8 +26,21 @@
 
 </head>
 <body>
+
+  <audio autoplay="autopaly" loop="loop" preload="auto" id="audios">
+    <source src="static/wuyueyu.mp3" type="audio/mp3" />
+  </audio>
+
+<script>
+// 将以下代码添加到js入口函数内即可
+// 这里使用了微信自带的WeixinJSBridgeReady事件
+document.addEventListener('WeixinJSBridgeReady', function() {
+    document.getElementById('audios').play();
+});
+ 
+</script>
   
-  <audio id="bgmMusic" src="static/wuyueyu.mp3" autoplay="autoplay" loop="loop" preload="auto" type="audio/mp3"></audio>
+
  
 <div class="snowflakes" aria-hidden="true">
  <div class="snowflake">2021</div>
@@ -163,9 +176,6 @@ btn3.onclick = function(event){
     }
 };
 
-$("html").one('touchstart',function(){
-audio.play();
-});
 
 </script>  
   
